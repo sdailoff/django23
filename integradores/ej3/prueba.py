@@ -1,15 +1,12 @@
-def maximo_comun_divisor(x, y):
-    temp = 0
-    while y != 0:
-        temp = y
-        y = x % y
-        x = temp
-    return x
-
-
-def minimo_comun_multiplo(x, y):
-    
-    return (x * y) // maximo_comun_divisor(x, y)
-
-print(minimo_comun_multiplo(5, 2))
-    
+def crear_diccionario(str_input):
+  '''Recibe una cadena de caracteres y regresa un diccionario con las palabras y frecuencia'''
+  lista= str_input.split()
+  dicc={}
+  for i in lista:
+    if i in dicc:
+      dicc[i] +=1
+    else:
+      dicc[i] = 1
+  return dicc
+ 
+print(crear_diccionario(input('Cadena de caracteres: ')))
