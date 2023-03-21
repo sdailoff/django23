@@ -32,15 +32,16 @@ class Persona():
     def es_mayor_de_edad(self):
         return self.__edad >= 18
 
-P = Persona('Sofi', 15, 40494199)
+P = Persona(input("Nombre: "), int(input("Edad: ")), int(input("DNI: ")))
 print(P.mostrar())
 
-print(P.es_mayor_de_edad())
+print("Es mayor de edad? " + str(P.es_mayor_de_edad()))
 
 
 
 p1 = Persona()
-p1.set_nombre('So')
-p1.set_edad(15)
-p1.set_dni(40)
+p1.set_nombre(input("Nombre: "))
+p1.set_edad(input("Edad: "))
+p1.set_dni(input("DNI: "))
 print(p1.mostrar())
+print("Es mayor de edad? " + str(p1.es_mayor_de_edad()))
